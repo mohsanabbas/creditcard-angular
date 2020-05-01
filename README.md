@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Deployed link
 
-Production: https://creditcard-zeta.now.sh
+Production: https://creditcard.moabbasch.now.sh/
 
 ## Development server
 
