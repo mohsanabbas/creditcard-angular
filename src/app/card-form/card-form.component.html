@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="header">
+    <div class="heading">
+      <span>Alterar forma de pagamento</span>
+    </div>
+    <div class="title">
+      <div class="icon">
+        <img src="../../assets/Group 1977.svg" alt="">
+      </div>
+      <div class="text">
+
+        <h4>
+          Adicione um novo cartão de crédito
+        </h4>
+      </div>
+    </div>
+    <div class="image">
+      <!-- <img src="../../assets/Group 1603.svg" alt=""> -->
+      <app-card [name]="cardForm.get('name').value" [cardNumber]="cardForm.get('cardNumber').value"
+        [expiration]="cardForm.get('expiration').value">
+      </app-card>
+    </div>
+  </div>
+  <div class="form">
+    <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+      <app-input label="Número do cartão" [control]="cardForm.get('cardNumber')">
+      </app-input>
+      <app-input label="Nome (igual ao cartão)" [control]="cardForm.get('name')">
+      </app-input>
+
+      <div class="columns">
+        <div class="column">
+          <app-input label="Validade" [control]="cardForm.get('expiration')"></app-input>
+        </div>
+        <div class="column">
+          <app-input label="CVV" [control]="cardForm.get('securityCode')"></app-input>
+        </div>
+      </div>
+
+      <div class="installment">
+        <app-input label="Número de parcelas" [control]="cardForm.get('installment')"></app-input>
+      </div>
+
+      <div class="buttons">
+        <button class="btn" [disabled]="cardForm.invalid" type="submit">
+          CONTINUAR
+        </button>
+        <!-- <button class="button is-warning" type="button" (click)="onResetClick()">
+          Reset
+        </button> -->
+      </div>
+    </form>
+
+  </div>
+
+</div>
