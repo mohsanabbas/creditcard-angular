@@ -64,14 +64,15 @@
 .field input:valid + .label-name::after {
   transform: translateX(0%);
 }
-// .field input:focus + .is-danger,
-// .field input:valid + .is-danger {
-//   padding: 0 30px 0 50px;
-//   color: #999;
+
+// .is-danger {
+//   display: flex;
 //   max-height: 0;
-//   transition: 0.28s;
-//   overflow: hidden;
+//   font-size: 10px;
 //   color: red;
 //   font-style: italic;
-//   transform: translateY(-120%);
+//   position: absolute;
+//   bottom: 15px;
+//   left: 0px;
+//   transition: all 0.3s ease;
 // }

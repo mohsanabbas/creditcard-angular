@@ -69,7 +69,7 @@
       @include for-phone-only {
         display: flex;
         padding: 0;
-        transform: translateY(0%);
+        transform: translateY(-40%);
       }
       .text {
         width: 165px;
@@ -114,6 +114,7 @@
     align-items: center;
     @include for-phone-only {
       padding: 2em;
+      transform: translateY(10%);
     }
   }
   .form form {
@@ -148,16 +149,7 @@
   color: white;
   font-size: 17px;
   font-weight: 600;
-}
-.btn_disabled {
-  top: 495px;
-  left: 714px;
-  width: 246px;
-  height: 51px;
-  background: #c9c1c1;
-  border-radius: 10px;
-  opacity: 1;
-  color: white;
-  font-size: 17px;
-  font-weight: 600;
+  @include for-phone-only() {
+    width: 100%;
+  }
 }

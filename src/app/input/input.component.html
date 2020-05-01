@@ -4,22 +4,24 @@
     <span class="content-name">
       {{ label }}
     </span>
+
   </label>
+
 
 
   <ng-container *ngIf="showErrors()">
     <div class="help is-danger" *ngIf="control.errors.required">
-      Value is required.
+      value is required.
     </div>
     <div class="help is-danger" *ngIf="control.errors.minlength">
-      Value you entered is
+      value you entered is
       {{ control.errors.minlength.actualLength }}
       characters long, but it must be at least
       {{ control.errors.minlength.requiredLength }}
       characters
     </div>
     <div class="help is-danger" *ngIf="control.errors.maxlength">
-      Value you entered is
+      value you entered is
       {{ control.errors.maxlength.actualLength }}
       characters long, but it cannot be longer than
       {{ control.errors.maxlength.requiredLength }}
